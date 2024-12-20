@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a href="/">Home</a>
+        <!-- Absolute path for Home -->
+        <a href="/about/">About</a>
+        <!-- Absolute path for About -->
+        <a href="/posts/">Posts</a>
+        <!-- Absolute path for Posts -->
+      </div>
+    </nav>
+    <main>
+      <h1>About Us</h1>
+      <div class="message">This is About page.</div>
+      <p>Learn more about our mission and what we do on this page.</p>
+    </main>
+  </body>
+</html>
