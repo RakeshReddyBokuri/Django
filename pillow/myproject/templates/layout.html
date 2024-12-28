@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Django Site{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}" />
+    <!-- Optional: Add Bootstrap CSS for styles -->
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <ul class="nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="/"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="/about/"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="{% url 'posts:list' %}"
+              >Posts</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="{% url 'posts:new-post' %}"
+              >New Post</a
+            >
+          
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="/admin/"
+              >Admin</a
+            >
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item"></li>
+          <form action="{% url 'users:logout' %}" method="post" class="nav-link">
+            {% csrf_token %}
+            <button class="logout">Logout</button>
+          </form>
+        </li>
+        {% else %}
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="{% url 'users:register' %}"
+          >Register</a
+        >
+      </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'users:login' %}"
+            >Login</a
+          >
+        </li>
+        {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">{% block content %} {% endblock %}</div>
+
+    <!-- Optional: Remove the script for a lightweight design -->
+  </body>
+</html>

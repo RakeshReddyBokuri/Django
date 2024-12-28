@@ -1,0 +1,108 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Modern font styling */
+  line-height: 1.6;
+  color: #333; /* Text color */
+  background-color: #f0f2f5; /* Set default background color similar to Facebook */
+}
+
+/* Wrapper for main content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; /* Spacing around the content */
+}
+
+/* Navigation bar styling */
+.navbar {
+  background-color: #2c2c2e; /* Dark gray background for the navbar */
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: space-between; /* Space between brand and links */
+  align-items: center; /* Align items vertically */
+  padding: 10px 20px; /* Padding inside the navbar */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Brand/logo styling */
+.navbar .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff; /* White text for the brand */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar .brand:hover {
+  color: #04aa6d; /* Add a green hover effect */
+}
+
+/* Navigation links */
+.navbar ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Flexbox for horizontal layout */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px; /* Space between links */
+}
+
+.navbar ul li a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* White text for links */
+  font-size: 1rem; /* Link font size */
+  padding: 8px 12px; /* Padding inside links */
+  border-radius: 5px; /* Rounded corners for hover effect */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover animation */
+}
+
+.navbar ul li a:hover {
+  background-color: #575757; /* Dark gray background on hover */
+  color: #04aa6d; /* Green text on hover */
+}
+
+.navbar ul li a:active {
+  background-color: #333; /* Slightly darker background on click */
+  color: white; /* Retain white text */
+}
+
+/* General content styling */
+h1 {
+  margin-top: 100px; /* Add spacing below the navbar */
+  font-size: 2.5rem;
+}
+
+p {
+  margin-bottom: 20px; /* Space below paragraphs */
+}
+
+img {
+  display: block;
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  margin: 20px 0; /* Add spacing above and below images */
+}
+
+/* Footer styling */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* General image styling */
+img {
+  display: block; /* Ensure images behave as block elements */
+  width: 100%; /* Set images to fill the width of their container */
+  max-width: 800px; /* Limit the maximum width of images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image if smaller than the container */
+  border-radius: 8px; /* Optional: Rounded corners for a polished look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+}

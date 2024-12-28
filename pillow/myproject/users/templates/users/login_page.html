@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="fb-container">
+  <div class="fb-login-box">
+    <h1 class="fb-header">Please Login</h1>
+    <form
+      action="/users/login/"
+      method="post"
+      class="fb-form">
+      {% csrf_token %}
+      <div class="form-group">{{ form }}</div>
+      {% if request.GET.next %}
+      <input
+        type="hidden"
+        name="next"
+        value="{{ request.GET.next }}" />
+      {% endif %}
+      <button class="fb-button">Log In</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
